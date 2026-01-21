@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hand Controlled 3D Particles </title>
+<title>Hand Controlled 3D Particles</title>
+<link rel="icon" href="icon.png" type="image/x-icon">
+
 <style>
-  body { margin: 0; overflow: hidden; background: rgb(88, 80, 80); }
+  body { margin: 0; overflow: hidden; background: black; }
   video {
     position: fixed;
     right: 10px;
@@ -13,27 +15,11 @@
     opacity: 0.7;
     z-index: 10;
   }
-  /* #musicBtn{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  border:none;
-  font-size:20px;
-  background:rgba(255,255,255,0.2);
-  color:white;
-  cursor:pointer;
-} */
 </style>
 </head>
 
 <body>
 <video id="video" autoplay muted playsinline></video>
-<!-- <audio id="music" loop></audio>
-<button id="musicBtn">▶</button> -->
-
 
 <!-- Three.js -->
 <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
@@ -43,42 +29,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
 
 <script>
-  /* ================= MUSIC ================= */
-// const music = document.getElementById("music");
-// const btn = document.getElementById("musicBtn");
-// const songs = ["song1.mp3","song2.mp3"];
-// let songIndex = 0;
-
-// initial song
-// music.src = songs[songIndex];
-// music.volume = 0.7;
-
-// button click to play/pause
-// btn.onclick = (e)=>{
-//   e.stopPropagation();
-//  btn.addEventListener("click", async (e) => {
-//   e.stopPropagation();
-//   try {
-//     if (music.paused) {
-//       await music.play(); // user interaction guarantee
-//       btn.textContent = "⏸";
-//     } else {
-//       music.pause();
-//       btn.textContent = "▶";
-//     }
-//   } catch (err) {
-//     console.log("Play blocked by browser:", err);
-//   }
-// });ontent = "▶"; // music paused
-//   };
-
-// double click to switch song
-// window.addEventListener("dblclick", ()=>{
-//   songIndex = (songIndex+1) % songs.length;
-//   music.src = songs[songIndex];
-//   music.play().then(()=> btn.textContent="⏸");
-// });
-
 /* ================= THREE SETUP ================= */
 const scene = new THREE.Scene();
 
